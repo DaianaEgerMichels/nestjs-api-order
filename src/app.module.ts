@@ -1,12 +1,27 @@
 import { Module } from '@nestjs/common';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
-import { ProductsModule } from './products/products.module';
 import { OrderModule } from './order/order.module';
 import { AssetsModule } from './assets/assets.module';
+import { TypeOrmModule } from '@nestjs/typeorm';
+import { ProductModule } from './product/product.module';
 
 @Module({
-  imports: [ProductsModule, OrderModule, AssetsModule],
+  imports: [
+    TypeOrmModule.forRoot({
+      type: 'mysql',
+      host: 'localhost',
+      port: 3307,
+      username: 'root',
+      password: 'root',
+      database: 'orders',
+      entities: [__dirname + '/**/*.entity{.ts,.js}'],
+      synchronize: true, // use in dev mode only
+    }),
+    OrderModule,
+    AssetsModule,
+    ProductModule,
+  ],
   controllers: [AppController],
   providers: [AppService],
 })

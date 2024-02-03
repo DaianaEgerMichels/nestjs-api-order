@@ -1,7 +1,7 @@
 # Order API
 
 * NestJS
-* Microservice backend
+* Microservice backend ecommerce
 
 ## Description
 
@@ -46,3 +46,6 @@ Nest is an MIT-licensed open source project. It can grow thanks to the sponsors 
 ## License
 
 Nest is [MIT licensed](LICENSE).
+
+By: Daiana Eger Michels 
+2024 - Immersion Full Stack && Full Cycle
