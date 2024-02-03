@@ -5,6 +5,7 @@ import { OrderModule } from './order/order.module';
 import { AssetsModule } from './assets/assets.module';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { ProductModule } from './product/product.module';
+import { AuthModule } from './auth/auth.module';
 
 @Module({
   imports: [
@@ -17,10 +18,12 @@ import { ProductModule } from './product/product.module';
       database: 'orders',
       entities: [__dirname + '/**/*.entity{.ts,.js}'],
       synchronize: true, // use in dev mode only
+      logging: true,
     }),
     OrderModule,
     AssetsModule,
     ProductModule,
+    AuthModule,
   ],
   controllers: [AppController],
   providers: [AppService],

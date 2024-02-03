@@ -13,6 +13,23 @@ API order using [Nest](https://github.com/nestjs/nest).
 $ npm install
 ```
 
+## Running docker compose
+
+```bash
+# root folder
+$ docker compose up
+
+# db
+$ docker compose exec db bash
+
+# into db
+$ mysql -u<user> -p<password>
+
+# view databases
+
+$ show databases;
+```
+
 ## Running the app
 
 ```bash
@@ -47,5 +64,4 @@ Nest is an MIT-licensed open source project. It can grow thanks to the sponsors 
 
 Nest is [MIT licensed](LICENSE).
 
-By: Daiana Eger Michels 
-2024 - Immersion Full Stack && Full Cycle
+By: Daiana Eger Michels - 2024 - Immersion Full Stack && Full Cycle
