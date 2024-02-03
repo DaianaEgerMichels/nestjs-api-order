@@ -5,6 +5,7 @@ import { OrderModule } from './order/order.module';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { ProductModule } from './product/product.module';
 import { AuthModule } from './auth/auth.module';
+import { RabbitmqModule } from './rabbitmq/rabbitmq.module';
 
 @Module({
   imports: [
@@ -22,6 +23,7 @@ import { AuthModule } from './auth/auth.module';
     OrderModule,
     ProductModule,
     AuthModule,
+    RabbitmqModule,
   ],
   controllers: [AppController],
   providers: [AppService],
