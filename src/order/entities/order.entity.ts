@@ -74,7 +74,7 @@ export class Order {
 
   // richest way to do this
 
-  static crete(input: CreateOrderCommand) {
+  static create(input: CreateOrderCommand) {
     const order = new Order();
     order.clientId = input.clientId;
     order.items = input.items.map((item) => {

@@ -11,6 +11,9 @@ export class CreateOrderDto {
   @IsString()
   @IsNotEmpty()
   cardHash: string;
+
+  @IsNotEmpty()
+  clientId: number;
 }
 
 export class OrderItemDto {

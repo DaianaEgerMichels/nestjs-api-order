@@ -2,7 +2,6 @@ import { Module } from '@nestjs/common';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { OrderModule } from './order/order.module';
-import { AssetsModule } from './assets/assets.module';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { ProductModule } from './product/product.module';
 import { AuthModule } from './auth/auth.module';
@@ -21,7 +20,6 @@ import { AuthModule } from './auth/auth.module';
       logging: true,
     }),
     OrderModule,
-    AssetsModule,
     ProductModule,
     AuthModule,
   ],

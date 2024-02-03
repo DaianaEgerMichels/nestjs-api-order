@@ -26,7 +26,6 @@ $ docker compose exec db bash
 $ mysql -u<user> -p<password>
 
 # view databases
-
 $ show databases;
 ```
 
